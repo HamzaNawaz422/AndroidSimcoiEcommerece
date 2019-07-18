@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.drawersimcom">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/launchericon1"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/launchericon1"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".extended"></activity>
+        <activity android:name=".home" />
+        <activity android:name=".product" />
+        <activity android:name=".pbyc" />
+        <activity android:name=".forget_password" />
+        <activity android:name=".login" />
+        <activity android:name=".sign_up" />
+        <activity
+            android:name=".DrawerSim"
+            android:label="@string/title_activity_drawer_sim"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
