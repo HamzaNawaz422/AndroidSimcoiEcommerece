@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".extended"
+    android:background="@drawable/back"
+    >
+    <RelativeLayout
+        android:id="@+id/side_bar"
+        android:layout_width="90dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        >
+        <Button
+            android:id="@+id/jewellery_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textSize="10dp"
+            android:onClick="jewellery_frame"
+            android:layout_margin="5dp"
+            android:text="Jewellery"/>
+        <Button
+            android:id="@+id/shoes_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:onClick="shoes_frame"
+            android:layout_below="@id/jewellery_btn"
+            android:textSize="10dp"
+            android:text="Shoes"/>
+        <Button
+            android:id="@+id/electronic_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textSize="10dp"
+            android:onClick="electronic_frame"
+            android:layout_margin="5dp"
+            android:layout_below="@id/shoes_btn"
+            android:text="Electronic"/>
+
+    </RelativeLayout>
+    <FrameLayout
+        android:id="@+id/shoes_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="90dp"
+        android:background="#AA00FF">
+        <TextView
+            android:id="@+id/jew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jewellery"
+            android:layout_marginTop="200dp"
+            android:gravity="center"
+            android:fontFamily="sans-serif-smallcaps"
+
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/text_color"
+            android:textSize="30dp"
+            />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/electronic_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="90dp"
+        android:background="#D50000">
+        <TextView
+            android:id="@+id/shoe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shoes"
+            android:layout_marginTop="200dp"
+            android:gravity="center"
+            android:fontFamily="sans-serif-smallcaps"
+
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/text_color"
+            android:textSize="30dp"
+            />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/jewellery_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="90dp"
+        android:background="#00C853">
+
+        <TextView
+            android:id="@+id/elec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="200dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="center"
+            android:text="Electronic"
+            android:textColor="@color/text_color"
+            android:textSize="30dp" />
+    </FrameLayout>
+
+</RelativeLayout>

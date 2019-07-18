@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/back">
+    </LinearLayout>
+
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".HomepageActivity"
+        android:padding="3dp"
+        android:background="@drawable/back">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:id="@+id/frame_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ViewFlipper
+                    android:id="@+id/flipperView"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/electronic">
+                </ViewFlipper>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="260dp"
+                    android:background="@drawable/image_rounded_back"
+                    android:layout_marginLeft="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jewellery"
+                    android:layout_marginTop="320dp"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#000"
+                    />
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="260dp"
+                    android:background="@drawable/image_rounded_back"
+                    android:layout_marginLeft="100dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shoes"
+                    android:layout_marginTop="320dp"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="105dp"
+                    android:textColor="#000"
+                    />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="260dp"
+                    android:background="@drawable/image_rounded_back"
+                    android:layout_marginLeft="190dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PBYC"
+                    android:layout_marginTop="320dp"
+                    android:onClick="pbyc"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="200dp"
+                    android:textColor="#000"
+                    />
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="260dp"
+                    android:background="@drawable/image_rounded_back"
+                    android:src="@mipmap/more_icon"
+                    android:onClick="searchProduct"
+                    android:layout_marginLeft="280dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="More"
+                    android:layout_marginTop="320dp"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="290dp"
+                    android:textColor="#000"
+                    />
+            </FrameLayout>
+            <!--Start of Jewellery-->
+            <LinearLayout
+                android:id="@+id/fashion_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:layout_below="@+id/frame_layout"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_gray">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Jewellery"
+                    android:textSize="16dp"
+                    android:textColor="@color/text_color"
+                    android:textStyle="bold"
+                    />
+                <Button
+                    android:id="@+id/fashion_btn_viewAll"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:text="View All"
+                    android:textSize="10dp"
+                    android:onClick="allProducts"
+                    android:layout_marginLeft="200dp"
+                    android:background="@color/text_color"
+                    android:textColor="#fff"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fashion_card_view1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/fashion_linear_layout">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/fashion_card_1"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="10dp"
+                    android:background="@color/colorAccent">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/silver_ring_image"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/silver_gold"
+                            />
+                        <TextView
+                            android:id="@+id/silver_image_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Diamond two-tone Ring"
+                            android:layout_marginLeft="10dp"
+                            android:layout_below="@id/silver_ring_image"
+                            android:layout_gravity="center"
+                            android:textColor="#000"
+                            android:layout_marginBottom="3dp"
+                            android:textSize="10dp"/>
+                        <TextView
+                            android:id="@+id/silver_image_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs 750"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginLeft="10dp"
+                            android:layout_below="@id/silver_image_desc"
+                            android:layout_gravity="center"
+                            android:textSize="10dp"/>
+                        <TextView
+                            android:id="@+id/silver_image_price_old"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs 950"
+                            android:textColor="#000"
+                            android:layout_marginLeft="50dp"
+                            android:layout_below="@id/silver_image_desc"
+                            android:layout_gravity="center"
+                            android:textSize="10dp"/>
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/fashion_card_2"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="10dp"
+                    android:background="@color/colorAccent">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/gold_ring_image"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/white_gold" />
+
+                        <TextView
+                            android:id="@+id/gold_image_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/gold_ring_image"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="3dp"
+                            android:text="Princess Cut Diamond Ring"
+                            android:textColor="#000"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/gold_image_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/gold_image_desc"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:text="Rs 450"
+                            android:textColor="#000"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fashion_card_view2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fashion_card_view1"
+                >
+                <android.support.v7.widget.CardView
+                    android:id="@+id/fashion_card_3"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="10dp"
+                    android:background="@color/colorAccent"
+                    >
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/ruby_ring_image"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/ruby_ring"
+                            />
+                        <TextView
+                            android:id="@+id/ruby_image_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Diamond Ruby Ring"
+                            android:layout_marginLeft="10dp"
+                            android:layout_below="@id/ruby_ring_image"
+                            android:layout_gravity="center"
+                            android:textColor="#000"
+                            android:layout_marginBottom="3dp"
+                            android:textSize="10dp"/>
+                        <TextView
+                            android:id="@+id/ruby_image_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs 1550"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginLeft="10dp"
+                            android:layout_below="@id/ruby_image_desc"
+                            android:layout_gravity="center"
+                            android:textSize="10dp"/>
+                        <TextView
+                            android:id="@+id/ruby_image_price_old"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs 1950"
+                            android:textColor="#000"
+                            android:layout_marginLeft="50dp"
+                            android:layout_below="@id/ruby_image_desc"
+                            android:layout_gravity="center"
+                            android:textSize="10dp"/>
+
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/fashion_card_4"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="10dp"
+                    android:background="@color/colorAccent"
+                    >
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/gold_rope_ring_image"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="10dp"
+
+                            />
+                        <TextView
+                            android:id="@+id/gold_rope_image_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gold Rope Ring"
+                            android:layout_marginLeft="10dp"
+                            android:layout_below="@id/gold_rope_ring_image"
+                            android:layout_gravity="center"
+                            android:textColor="#000"
+                            android:layout_marginBottom="3dp"
+                            android:textSize="10dp"/>
+                        <TextView
+                            android:id="@+id/gold_rope_image_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs 750"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginLeft="10dp"
+                            android:layout_below="@id/gold_rope_image_desc"
+                            android:layout_gravity="center"
+                            android:textSize="10dp"/>
+                        <TextView
+                            android:id="@+id/gold_rope_image_price_old"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs 950"
+                            android:textColor="#000"
+                            android:layout_marginLeft="50dp"
+                            android:layout_below="@id/gold_rope_image_desc"
+                            android:layout_gravity="center"
+                            android:textSize="10dp"/>
+
+
+                    </RelativeLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+            <!--End of Jewellery-->
+            <LinearLayout
+                android:id="@+id/shoe_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/color_gray"
+                android:layout_below="@id/fashion_card_view2"
+                android:padding="5dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="Shoes"
+                    android:textSize="15dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/text_color"/>
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:text="view All"
+                    android:background="@color/text_color"
+                    android:textSize="10dp"
+                    android:textColor="#fff"
+                    android:layout_marginLeft="230dp"/>
+            </LinearLayout>
+
+            <!--shoes Card View-->
+
+            <LinearLayout
+                android:id="@+id/shoes_card_view1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shoe_linear_layout">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/shoes_card_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="10dp"
+                    android:background="@color/colorAccent">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/women_yellow"/>
+                    <TextView
+                        android:id="@+id/shoe1_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ladies High heels traditional"
+                        android:layout_marginLeft="95dp"
+                        android:textColor="#000"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15dp"
+                        android:fontFamily="sans-serif-smallcaps"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs 2900"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="95dp"
+                        android:layout_marginTop="40dp"
+                        android:textColor="#000"
+                        android:textSize="10dp"
+                        android:fontFamily="sans-serif-smallcaps"/>
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/shoes_card_view2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shoes_card_view1">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/shoes_card_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="10dp"
+                    android:background="@color/colorAccent">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/black_women"/>
+                    <TextView
+                        android:id="@+id/shoe2_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Black High heel shoe"
+                        android:layout_marginLeft="95dp"
+                        android:textColor="#000"
+                        android:layout_marginTop="10dp"
+                        android:textSize="15dp"
+                        android:fontFamily="sans-serif-smallcaps"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs 2900"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="95dp"
+                        android:layout_marginTop="40dp"
+                        android:textColor="#000"
+                        android:textSize="10dp"
+                        android:fontFamily="sans-serif-smallcaps"/>
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/shoes_card_view3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shoes_card_view2">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/shoes_card_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="10dp"
+                    android:background="@color/colorAccent">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/flower_shoe_image"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/ladies_flower"
+                            />
+                        <TextView
+                            android:id="@+id/yellow_shoe_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Flower shoe with high heels"
+                            android:layout_marginLeft="95dp"
+                            android:layout_gravity="center"
+                            android:textColor="#000"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="3dp"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="15dp"/>
+                        <TextView
+                            android:id="@+id/yellow_shoe_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs 750"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginLeft="95dp"
+                            android:layout_below="@id/yellow_shoe_desc"
+                            android:layout_gravity="center"
+                            android:textSize="10dp"/>
+                        <TextView
+                            android:id="@+id/yellow_shoe_price_old"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs 950"
+                            android:textColor="#000"
+                            android:layout_marginLeft="150dp"
+                            android:layout_below="@id/yellow_shoe_desc"
+                            android:layout_gravity="center"
+                            android:textSize="10dp"/>
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/shoes_card_view4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shoes_card_view3">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/shoes_card_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="10dp"
+                    android:background="@color/colorAccent">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/red_shoe_image"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/women_shoes"
+                            />
+                        <TextView
+                            android:id="@+id/red_shoe_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Red shoe with high heels"
+                            android:layout_marginLeft="95dp"
+                            android:layout_gravity="center"
+                            android:textColor="#000"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="3dp"
+                            android:fontFamily="sans-serif-smallcaps"
+                            android:textSize="15dp"/>
+                        <TextView
+                            android:id="@+id/red_shoe_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs 750"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginLeft="95dp"
+                            android:layout_below="@id/red_shoe_desc"
+                            android:layout_gravity="center"
+                            android:textSize="10dp"/>
+                        <TextView
+                            android:id="@+id/red_shoe_price_old"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs 950"
+                            android:textColor="#000"
+                            android:layout_marginLeft="150dp"
+                            android:layout_below="@id/red_shoe_desc"
+                            android:layout_gravity="center"
+                            android:textSize="10dp"/>
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <!--Ends here-->
+            <LinearLayout
+                android:id="@+id/electronic_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:layout_below="@+id/shoes_card_view4"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_gray">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Electronic"
+                    android:textSize="16dp"
+                    android:textColor="@color/text_color"
+                    android:textStyle="bold"
+                    />
+                <Button
+                    android:id="@+id/electronic_btn_viewAll"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:text="View All"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="200dp"
+                    android:background="@color/text_color"
+                    android:textColor="#fff"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/electronic_card_view1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/electronic_linear_layout">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/electronic_card_1"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="10dp"
+                    android:background="@color/colorAccent">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/mac_image"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="10dp"
+
+                            />
+                        <TextView
+                            android:id="@+id/mac_image_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mac Book Pro "
+                            android:layout_marginLeft="10dp"
+                            android:layout_below="@id/mac_image"
+                            android:layout_gravity="center"
+                            android:textColor="#000"
+                            android:layout_marginBottom="3dp"
+                            android:textSize="10dp"/>
+                        <TextView
+                            android:id="@+id/mac_image_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 750"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginLeft="10dp"
+                            android:layout_below="@id/mac_image_desc"
+                            android:layout_gravity="center"
+                            android:textSize="10dp"/>
+                        <TextView
+                            android:id="@+id/mac_image_price_old"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 850"
+                            android:textColor="#000"
+                            android:layout_marginLeft="50dp"
+                            android:layout_below="@id/mac_image_desc"
+                            android:layout_gravity="center"
+                            android:textSize="10dp"/>
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/electronic_card_2"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="10dp"
+                    android:background="@color/colorAccent">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iphonex_image"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="10dp"
+                           ></ImageView>
+
+                        <TextView
+                            android:id="@+id/iphone_image_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iphonex_image"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="3dp"
+                            android:text="Iphone X with 32GB"
+                            android:textColor="#000"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/iphone_image_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iphone_image_desc"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:text="$ 1000"
+                            android:textColor="#000"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/electronic_card_view2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="60dp"
+                android:layout_below="@id/electronic_card_view1">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/electronic_card_3"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="10dp"
+                    android:background="@color/colorAccent">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/headphone_image"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="10dp"
+
+                            />
+                        <TextView
+                            android:id="@+id/headphone_image_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wireless Headphones base Boosted"
+                            android:layout_marginLeft="10dp"
+                            android:layout_below="@id/headphone_image"
+                            android:layout_gravity="center"
+                            android:textColor="#000"
+                            android:layout_marginBottom="3dp"
+                            android:textSize="10dp"/>
+                        <TextView
+                            android:id="@+id/headphone_image_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 150"
+                            android:textStyle="bold"
+                            android:textColor="#000"
+                            android:layout_marginLeft="10dp"
+                            android:layout_below="@id/headphone_image_desc"
+                            android:layout_gravity="center"
+                            android:textSize="10dp"/>
+                        <TextView
+                            android:id="@+id/headphone_image_price_old"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 200"
+                            android:textColor="#000"
+                            android:layout_marginLeft="50dp"
+                            android:layout_below="@id/headphone_image_desc"
+                            android:layout_gravity="center"
+                            android:textSize="10dp"/>
+
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/electronic_card_4"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="10dp"
+                    android:background="@color/colorAccent">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/laptop_image"
+                            android:layout_width="140dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                           ></ImageView>
+
+                        <TextView
+                            android:id="@+id/laptop_image_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/laptop_image"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="3dp"
+                            android:text="Mac Laptop"
+                            android:textColor="#000"
+                            android:textSize="10dp" />
+
+                        <TextView
+                            android:id="@+id/laptop_image_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/laptop_image_desc"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:text="$ 1300"
+                            android:textColor="#000"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_drawer_sim"
+        app:menu="@menu/activity_drawer_sim_drawer"
+        app:itemIconTint="@color/colorblue"
+        />
+
+
+</android.support.v4.widget.DrawerLayout>
+
+
+

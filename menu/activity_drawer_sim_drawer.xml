@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:title="My Account">
+            <menu>
+
+                <item
+                    android:id="@+id/pro"
+                    android:icon="@mipmap/profile"
+                    android:title="My Profile" />
+                <item
+                    android:id="@+id/wish"
+                    android:icon="@mipmap/wishlist"
+                    android:title="My Wish List" />
+                <item
+                    android:id="@+id/cart"
+                    android:icon="@mipmap/cart"
+                    android:title="My Cart" />
+                <item
+                    android:id="@+id/order"
+                    android:icon="@mipmap/myorder"
+                    android:title="My Order" />
+                <item
+                    android:id="@+id/login"
+                    android:icon="@mipmap/login"
+                    android:title="Login" />
+            </menu>
+        </item>
+
+    </group>
+
+    <item android:title="Support">
+        <menu>
+            <item
+                android:id="@+id/faq"
+                android:icon="@mipmap/faq"
+                android:title="FAQ" />
+            <item
+                android:id="@+id/email"
+                android:icon="@mipmap/email"
+                android:title="Email" />
+            <item
+                android:id="@+id/call"
+                android:icon="@mipmap/call"
+                android:title="Call" />
+
+        </menu>
+    </item>
+
+    <item android:title="others">
+        <menu>
+            <item
+                android:id="@+id/share"
+                android:icon="@mipmap/share"
+                android:title="Share" />
+            <item
+                android:id="@+id/rate"
+                android:icon="@mipmap/rate"
+                android:title="Rate App" />
+            <item
+                android:id="@+id/info"
+                android:icon="@mipmap/info"
+                android:title="App Info" />
+            <item
+                android:id="@+id/aboutus"
+                android:icon="@mipmap/about"
+                android:title="About Us" />
+
+        </menu>
+    </item>
+
+</menu>
